@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mosharrat Marufa Sigma Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Mosharrat M. Sigma</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+			  <li class="nav-item"><a href="#education-section" class="nav-link"><span>Certification</span></a></li>
+			  
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_2.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Mosharrat M. Sigma</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Engineer      ',
+						'Data Analyst  ',
+						'YouTuber      ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>A Data Analyst</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/mosharrat-marufa-sigma" class="btn btn-primary py-3 px-4">LinkedIn</a> 
+						   <a href="https://github.com/mm-sigma" class="btn btn-white btn-outline-white py-3 px-4">Github</a>
+						   <a href="https://my.novypro.com/mosharratmarufa" class="btn btn-white btn-outline-white py-3 px-4">NovyPro</a></p>  
+						</p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/sigma_logo.png" class="img-fluid rounded b-shadow-a">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Mosharrat M. Sigma</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Data Analyst</span></p>
+										<p><span class="title-s">Email: </span> <span>mosharrat.cse@gmail.com</span></p>
+										<p><span class="title-s">Contact: </span> <span>+8801303759151</span></p>
+										<p><span class="title-s">Address: </span> <span>Rajshahi, Bangladesh</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>PYTHON</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Machine Learning</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Forecasting</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Power BI</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>DAX Function</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>EDA and Data Visualization</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Statistical Analysis</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>MySQL</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>PostgreSQL</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>With 50+ certification courses with comprehensive hand-on training on 50+ projects in the field of data science & analytics and industry-level internship as Machine Learning Trainee ;
+									I'm proficient in data cleaning, data wrangling, feature engineering, exploratory data analysis (EDA), statistical analysis, hypothesis testing, predictive analysis, 
+									customer behaviour analysis, finding forecasting trend &amp; machine learning. I've Bachelor's Degree in Computer Science and Engineering with scholarship.
+									I am excited to the opportunity to contribute in data science and analytics field, that will empower to optimize any business as well as social problem effectively 
+									using my vast knowledge of Python EDA, Machine Learning, Forecasting Trend, PowerBI, MySQL and PostgreSQL. </p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Data Analysis</span> <span>Python, Data Visualization, Missing Data & Outlier Handling, Feature Engineering, Data Wrangling, EDA </span></li>
+									<li class="d-flex"><span>Python library   </span> <span>Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn, SciPy  </span></li>
+									<li class="d-flex"><span>Mathematics</span> <span> Statistics, Linear Algebra, Probability, Calculus, Coordinate Geometry and Vector Analysis  </span></li>
+									<li class="d-flex"><span>Machine Learning   </span> <span>Supervised, Unsupervised and Forecasting ML Algorithms, Hypothesis Testing </span></li>
+									
+									<li class="d-flex"><span>BI Tools</span> <span>Microsoft Power BI, Microsoft Excel</span></li>
+									<li class="d-flex"><span>Databases</span> <span> MySQL, PostgreSQL </span></li>
+									<li class="d-flex"><span>Web </span> <span>HTML, CSS, Flask</span></li>
+									<li class="d-flex"><span>Cloud</span> <span> Heroku, Git, Docker  </span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<a href="#" class="btn btn-primary py-3 px-3"></a>
+									<span class="number" data-number="50">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Data Analyst with 50+ projects on driving business strategies through data-driven insights. Proven expertise in data science, statistical analysis, machine learning algorithms and project management.</p>
+			<div class="row justify-content-center mt-5">
+				<div class="col-md-6 text-center ftco-animate">
+					<p><a href="https://drive.google.com/file/d/1lD1kdyriJWYn-8RZuIlz8toxemRSq4dX/view?usp=sharing" class="btn btn-primary py-4 px-5">Download Resume</a></p>
+				</div>
+			</div>
+          </div>
+		  
+        </div>
+		
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2024 (March-April)</span>
+						<h2>Machine Learning Trainee</h2>
+						<span class="position">Mentorness IT Services & Consulting</span>
+						<p class="mt-4"> 
+							<ul>
+								<li>Developed a Predictive Credit Card Approval system using scikit-learn library by classification type machine learning algorithm. 
+									Gradient Boosting classification algorithm can predict with 98.4% accuracy and 80% precision score.</li>
+								<li>Developed Time Series Forecasting models to forecast sales and optimize marketing budgets, got model performance of 92%.</li>				
+							</ul>
+						</p>
+					</div>
+				
+			</div>
+
+		<br>
+		<br>
+
+		<section class="ftco-section" id="project-section">
+			<div class="container">
+			  <div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+				  <h1 class="big big-2">Projects</h1>
+				  <h2 class="mb-4">Projects</h2>
+				  <p>Below are the sample Data Analytics projects on Python EDA, Machine Learning, Forecasting, Power BI & DAX and PostgreSQL.</p>
+				</div>
+			  </div>
+			  <div class="row d-flex">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+					<a href="https://github.com/mm-sigma/PostgreSQL_Music_Insights/blob/f2ad7f652fced8ebff45231f11c2aeca7019e627/music%20postgresql%20query.sql" class="block-20 zoom-effect" style="background-image: url('images/music.jpeg');">
+					</a>
+					<div class="text mt-3 float-right d-block">
+	  
+					  <h3 class="heading"><a href="https://github.com/mm-sigma/PostgreSQL_Music_Insights/blob/f2ad7f652fced8ebff45231f11c2aeca7019e627/music%20postgresql%20query.sql">Digital Music Store Data Analysis using PostgreSQL</a></h3>
+					  <p>Analyzed music store data using PostgreSQL queires to identify gaps and increase the business growth.</p>
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+					<a href="https://github.com/mm-sigma/Hotel_Booking/blob/d63162b723e0291593c5fb473745b43ef94562e1/Hotel%20Booking%20mean%20median%20mode%202.ipynb" class="block-20 zoom-effect" style="background-image: url('images/hotel.jpeg');">
+					</a>
+					<div class="text mt-3 float-right d-block">
+	  
+					  <h3 class="heading"><a href="https://github.com/mm-sigma/Hotel_Booking/blob/d63162b723e0291593c5fb473745b43ef94562e1/Hotel%20Booking%20mean%20median%20mode%202.ipynb">Exploratory Data Analysis using Python</a></h3>
+					  <p>Performed exploratory data analysis on hotel reservation data using Python to improve the customer experience.</p>
+					</div>
+				  </div>
+				</div>
+	  
+				<div class="col-md-4 d-flex ftco-animate">
+				  <div class="blog-entry justify-content-end">
+				  <a href="https://github.com/mm-sigma/Credit-Card-Approval-Prediction/blob/807e8606d09592791539aa30c6f4c936aafab8cd/Credit%20Card%20Approval%20Prediction.ipynb" class="block-20 zoom-effect" style="background-image: url('images/machine_learning.jpg');">
+				  </a>
+				  <div class="text mt-3 float-right d-block">
+	  
+					<h3 class="heading"><a href="https://github.com/mm-sigma/Credit-Card-Approval-Prediction/blob/807e8606d09592791539aa30c6f4c936aafab8cd/Credit%20Card%20Approval%20Prediction.ipynb">ML model on Credit Card Approval Prediction</a></h3>
+					<p>Developed Machine Learning model of Credit Card Approval to predict whether a client's application for credit card should be approved or not</p>
+				  </div>
+				</div>
+			  </div>
+				
+		  <br>
+			  <!-- added justify-content-center to center align the last two projects -->
+			  <div class="row d-flex justify-content-center">  
+				  <div class="col-md-4 d-flex ftco-animate">
+					  <div class="blog-entry justify-content-end">
+					  <a href="https://github.com/mm-sigma/Furniture-Sales-Forecasting/blob/370a4547184eaeee9f9ef7e5950553f657639972/Furniture%20Sales%20EDA%20%26%20ML.ipynb" class="block-20 zoom-effect" style="background-image: url('images/time_series.jpg');">
+					  </a>
+					  <div class="text mt-3 float-right d-block">
+		
+						<h3 class="heading"><a href="https://github.com/mm-sigma/Furniture-Sales-Forecasting/blob/370a4547184eaeee9f9ef7e5950553f657639972/Furniture%20Sales%20EDA%20%26%20ML.ipynb">Sales Forecast- Time Series Forecasting</a></h3>
+						<p>Used multiple forecasting models(SARIMAX, ARIMA) to forecast furniture store sales and performed time series analysis.</p>
+					  </div>
+					</div>
+				  </div>
+				  <div class="col-md-4 d-flex ftco-animate">
+					  <div class="blog-entry">
+					  <a href="https://www.novypro.com/project/spotify-dashboard-19" class="block-20 zoom-effect" style="background-image: url('images/spotify_screenshot.png');">
+					  </a>
+					  <div class="text mt-3 float-right d-block">
+		
+						<h3 class="heading"><a href="https://www.novypro.com/project/spotify-dashboard-19">Power BI Spotify dashboard</a></h3>
+						<p>Designed a power bi dashboard for Spotify dataset to analyze the energy% and sales.</p>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			   </div>
+			</div>
+		  </section>
+		
+		<section id="education-section">
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2012-2016</span>
+    					<h2>Bachelor's of Computer Science and Engineering</h2>
+    					<span class="position">United International University</span>
+    					<p class="mt-4">Grade: First class with scholarship </p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2009-2011</span>
+    					<h2>Higher Secondary School</h2>
+    					<span class="position">Government City College</span>
+    					<p class="mt-4">Grade: First class (GPA: 5.00 out of 5)</p>
+    				</div>
+				</div>
+    		</div>
+			<br></br>
+			<br></br>
+			<div class="row">
+				<h1 class="big-4">Certification</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+				
+						<h2>Python EDA</h2>
+						<p class="mt-4"> 
+					
+							<li><a class="" href="https://www.datacamp.com/completed/statement-of-accomplishment/track/e07381e1439d8c62cd64eadaf5d11e7956168141">Data Analyst with Python (Track of 8 different courses)</a></li>
+							<li><a class="" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/b68b2aa788ac3af94de2624e8c3e3eacec26602e">Intermediate Python</a></li>
+							<li><a class="" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/b71d2a5e810fceac7a43dd07c8a8cb7ad4baf48b">Data Manipulation with Pandas</a></li>				
+							<li><a class="" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/c93f0258b9a192947ac5593fc8d60f4f0455f0c8">Dealing with Missing Data in Python</a></li>
+							<li><a class="" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/69ded836616ed42b1d68a2d40a27f966199415cd">Exploratory Data Analysis in Python</a></li>
+							<li><a class="" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/0ae5e06c784bb16d22ba1496c01fdddfaf7b22f8">Data Visualization with Seaborn</a></li>
+						</p>
+
+						<h2>Machine Learning</h2>
+						<p class="mt-4"> 
+							<li><a class="" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/9fff2375e95dccfcaba3038c1ba566e164f5fa87">Machine Learning with scikit-learn </a></li>
+							<li><a class="" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/0996fe019ffb6d55bd0cb4242f0f1c5ac71c5f0c">Statistical Analysis with Python</a></li>
+							<li><a class="" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/bc941840f663fb3eaf1fce314049999f1bd2725d">Feature Engineering for Machine Learning in Python</a></li>
+							<li><a class="" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/c2c3bdc640f2b5352285a3ca9c9529ac1455e634"> Machine Learning for Finance in Python </a></li>
+							<li><a class="" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/2092099b2e8f8983f6ae7e906577879260490f14"> Preprocessing for Machine Learning in Python</a></li>
+							<li><a class="" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/de3911c012de7678a0d46aceaa6d5b81a6d29476">Hypothesis Testing in Python</a></li>
+							<li><a class="" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/f8cc7cad585198abff6afa244f704b1dbab69ecb">Sampling in Python</a></li>				
+							
+						</p>
+						<h2>Cloud</h2>
+						<p class="mt-4"> 
+							<li><a class="" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/94d44ec21d7675ed36fd143fabc0a6c8a0d1d282">GitHub Concept</a></li>
+							<li><a class="" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/5227a6f27d87649bdd8410c657787f166d2d8cd4">Docker Concept</a></li>			
+							
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<h2>Microsoft PowerBI</h2>
+						<p class="mt-4"> 
+							<li><a class="" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/7ed843f64282b75728829ed4a493b2fdcdb70b92">DAX Function in PowerBI</a></li>
+							<li><a class="" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/1b7c9d7ca0d2b78f3e112fcf4c21f93cdc0dd1db">Data Visualization in PowerBI</a></li>
+							<li><a class="" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/81a111cb152b5f83892630fb55e0f2a81ed332db">Exploratory Data Analysis in PowerBI</a></li>
+							<li><a class="" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/05eb72f5894eb0d4477162722166532eb5493586">Financial Analysis in PowerBI</a></li>
+							<li><a class="" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/e00f82a455d1329aacb4a87ec13bae72b974b011">Report Design in PowerBI</a></li>
+							<li><a class="" href="https://www.credly.com/badges/b1082d1c-f776-41de-b057-c3eb8c57f1f5/">Cisco Data Analysis Essentials</a></li>
+							<li><a class="" href="https://www.credly.com/badges/a8395ac1-e7b1-4746-b78d-61d075c06ded/">CIsco Data Science</a></li>				
+							
+						</p>
+
+						<h2>SQL</h2>
+						<p class="mt-4"> 
+							<li><a class="" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/36d87d1779cf30222b2918247656929f1218af2a">Analyzing Business Data in SQL</a></li>
+							<li><a class="" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/d83db837b70d5ef5129b6bfe9ec83220b0f32946">Exploratory Data Analysis in SQL</a></li>
+							<li><a class="" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/896e756ec571e4dce7030b61802ee958a8701993">Reporting in SQL</a></li>
+							<li><a class="" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/1cb41d76985eaba492e8b99e1fb5fe4affa390d2">Functons for Manipulating Data in PostgreSQL</a></li>
+							<li><a class="" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/10bf9d918ca889e1f2b695d8372090bfee30a005">Cleaning Data in PostgreSQL</a></li>
+							<li><a class="" href="https://www.credly.com/badges/b1082d1c-f776-41de-b057-c3eb8c57f1f5/">Cisco Data Analysis Essentials</a></li>
+							<li><a class="" href="https://www.credly.com/badges/a8395ac1-e7b1-4746-b78d-61d075c06ded/">CIsco Data Science</a></li>				
+							
+						</p>
+
+						
+					</div>
+
+				</div>
+			</div>
+
+		<br></br>
+		<br></br>
+    	</div>
+    </section>
+</section>
+
+   
+
+   
+	
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="2">0</strong>
+                <span>Experience</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="50">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="53">0</strong>
+                <span>Certificates Achieved</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="500">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/mm-sigma" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Rajshahi, Bangladesh</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+8801303759151</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:mosharrat.cse@gmail.com">mosharrat.cse@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/1lD1kdyriJWYn-8RZuIlz8toxemRSq4dX/view?usp=sharing">resumelink</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://www.linkedin.com/in/mosharrat-marufa-sigma" class="btn btn-primary py-3 px-5">Message Me</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/mosharrat-marufa-sigma"><span class="icon-linkedin"></span></a></li>
+					  <li class="ftco-animate"><a href="https://github.com/mm-sigma"><span class="icon-github"></span></a></li>
+				      <li class="ftco-animate"><a href="https://my.novypro.com/mosharratmarufa"><span class="icon-novypro"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.youtube.com/@sigmamedia9"><span class="icon-youtube"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="icon-heart color-danger" aria-hidden="true"></i> <a href="https://colorlib.com" target="_blank"></a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
